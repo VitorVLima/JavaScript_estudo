@@ -9,7 +9,7 @@ p_array.innerHTML = "["+elementos_array+"]"
 
 btnPesquisar.addEventListener("click",(evt)=>{
     const ret =elementos_array.find((el,i)=>{
-        if(el.toUpperCase() == txt_pesquisar.value.toUpperCase()){
+        if(el.toUpperCase() == txt_pesquisar.value.toUpperCase().trim()){
             resultado.innerHTML="o curso de " + el + " foi encontrado na posição " + i
             return el
         }

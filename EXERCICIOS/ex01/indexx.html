@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Produtos por Categoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Filtrar Produtos por Categoria e Nome</h1>
+    
+    <!-- Campo de pesquisa por nome -->
+    <input type="text" id="pesquisa" placeholder="Digite o nome do produto..." />
+
+    <!-- Campo de seleção de categoria -->
+    <select id="categoriaSelect">
+        <option value="">Selecione uma Categoria</option>
+        <option value="fruta">Frutas</option>
+        <option value="bebida">Bebidas</option>
+        <option value="outros">Outros</option>
+    </select>
+    
+    <button id="btnPesquisar">Pesquisar</button>
+
+    <h2>Produtos</h2>
+    <ul id="lista">
+        <li data-categoria="fruta">Maçã</li>
+        <li data-categoria="fruta">Banana</li>
+        <li data-categoria="fruta">Laranja</li>
+        <li data-categoria="bebida">Suco de Laranja</li>
+        <li data-categoria="bebida">Café</li>
+        <li data-categoria="fruta">Uva</li>
+        <li data-categoria="fruta">Melancia</li>
+        <li data-categoria="bebida">Refrigerante</li>
+        <li data-categoria="outros">Chocolate</li>
+    </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
