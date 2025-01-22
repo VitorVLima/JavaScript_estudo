@@ -32,7 +32,7 @@ button{
   
 }
 
-.destaque{
+.selecionado{
     background-color: #800 !important;
     color: #fcc !important;
     border-color: #800 !important;
