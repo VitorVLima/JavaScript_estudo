@@ -7,35 +7,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Filtrar Produtos por Categoria e Nome</h1>
-    
-    <!-- Campo de pesquisa por nome -->
-    <input type="text" id="pesquisa" placeholder="Digite o nome do produto..." />
+    <div class="navbar">
+        <button id="botaoCarrinho" class="cart-icon">&#128722; </button> <!-- Ícone de carrinho -->
+    </div>
+    <!-- Caixa de Carrinho (Modal) -->
+<div id="modalCarrinho" class="modal">
+    <div class="modal-conteudo">
+        <h2>Itens no Carrinho</h2>
+        <ul id="itensCarrinho">
+           
+            <!-- Itens adicionados ao carrinho aparecerão aqui -->
+        </ul>
+        <div class="modal-footer">
+            <button id="fecharCarrinho">Cancelar</button>
+            <button id="finalizarCompra">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
 
-    <!-- Campo de seleção de categoria -->
-    <select id="categoriaSelect">
-        <option value="">Selecione uma Categoria</option>
-        <option value="fruta">Frutas</option>
-        <option value="bebida">Bebidas</option>
-        <option value="outros">Outros</option>
-    </select>
-    
-    <button id="btnPesquisar">Pesquisar</button>
-
-    <h2>Produtos</h2>
-    <ul id="lista">
-        <li data-categoria="fruta">Maçã</li>
-        <li data-categoria="fruta">Banana</li>
-        <li data-categoria="fruta">Laranja</li>
-        <li data-categoria="bebida">Suco de Laranja</li>
-        <li data-categoria="bebida">Café</li>
-        <li data-categoria="fruta">Uva</li>
-        <li data-categoria="fruta">Melancia</li>
-        <li data-categoria="bebida">Refrigerante</li>
-        <li data-categoria="outros">Chocolate</li>
-    </ul>
+    <main>
+     
+        <!-- Campo de pesquisa por nome -->
+        <input type="text" id="pesquisa" placeholder="Digite o nome do produto..." />
+        <!-- Campo de seleção de categoria -->
+        <select id="categoriaSelect">
+            <option value="">Selecione uma Categoria</option>
+            <option value="fruta">Frutas</option>
+            <option value="bebida">Bebidas</option>
+            <option value="outros">Outros</option>
+        </select>
+        
+        <button id="btnPesquisar">Pesquisar</button>
+        <h2>Produtos</h2>
+        <ul id="lista">
+            <li data-categoria="fruta" class="produto">
+                Maçã <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+            <li data-categoria="fruta" class="produto">
+                Banana <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+            <li data-categoria="fruta" class="produto">
+                Laranja <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+            <li data-categoria="bebida" class="produto">
+                Suco de Laranja <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+            <li data-categoria="bebida" class="produto">
+                Café <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+            <li data-categoria="fruta" class="produto">
+                Uva <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+            <li data-categoria="fruta" class="produto">
+                Melancia <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+            <li data-categoria="bebida" class="produto">
+                Refrigerante <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+            <li data-categoria="outros" class="produto">
+                Chocolate <span class="preco">Preço: R$</span><span class="quantidade">Quantidade em Estoque: </span>
+            </li>
+        </ul>
+    </main>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 

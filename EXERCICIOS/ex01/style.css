@@ -1,13 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    padding: 20px;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 10px;
+   
+  
     background-color: #f4f4f4;
 }
 
 h1 {
     text-align: center;
     color: #333;
+}
+
+h2{
+    margin-top: 50px;
+    text-align: center;
 }
 
 #pesquisa, #categoriaSelect {
@@ -41,8 +55,13 @@ button:hover {
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
+
 
 li {
     padding: 10px;
@@ -50,8 +69,119 @@ li {
     margin: 5px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 200px;
+    min-width: 100px;
+    max-width: 20%;
+    flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 li.hidden {
     display: none;
 }
+
+.preco {
+    font-weight: bold;
+    margin-left: 10px;
+    color: green;
+}
+
+.quantidade {
+    margin-left: 10px;
+    color: #333;
+}
+
+/* Barra de navegação superior */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+}
+
+/* Estilo do ícone de carrinho */
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+    max-width: 200px;
+}
+
+.cart-icon:hover {
+    background-color: #45a049;
+}
+
+/* Modal (Caixa do Carrinho) */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Garantir que o modal fique acima de outros elementos */
+}
+
+/* Conteúdo do Modal */
+.modal-conteudo {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Largura do modal */
+    text-align: center;
+    float: right;
+    margin-top: 70px;
+}
+
+/* Estilo dos botões */
+
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo da lista de itens do carrinho */
+#itensCarrinho {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    max-height: 200px;
+    overflow-y: auto; /* Adiciona rolagem caso a lista seja longa */
+    display: block;
+}
+
+#fecharCarrinho , #finalizarCompra {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#fecharCarrinho:hover , #finalizarCompra:hover{
+    background-color: #45a049;
+}
+
+
+
