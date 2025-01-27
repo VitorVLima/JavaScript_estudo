@@ -26,10 +26,15 @@
     background-color: red;
     color: white;
     cursor: pointer;
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 .btn_remover:hover{
-    background-color: red;
+    background-color: darkred;
     color: white;
     cursor: pointer;
 }

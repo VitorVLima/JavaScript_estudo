@@ -42,7 +42,7 @@ radios[1].addEventListener("click",(evt)=>{
 
 const gerenciarExibicao=()=>{
     Resultado.innerHTML=""
-    carros.forEach((c)=>{
+    carros.forEach((c,ind)=>{
         const btn = document.createElement("button")
         const div = document.createElement("div")
         div.setAttribute("class","carro")
@@ -51,8 +51,15 @@ const gerenciarExibicao=()=>{
             div.innerHTML+=`<br/> Blindagem: ${c.blindagem} <br/> Munição: ${c.municao}`
         }
         btn.innerHTML="remover"
+        btn.setAttribute("class","btn_remover")
         Resultado.appendChild(div)
         div.appendChild(btn)
+
+        btn.addEventListener("click",()=>{
+            carros.splice(ind,1)
+            div.remove()
+            console.log(carros)
+        })
     })
 }
 
@@ -78,4 +85,5 @@ btnAdicionar.addEventListener("click",()=>{
     nome.value = ""
     portas.value = 0
     alert("Veiculo adicionado com sucesso")
+    console.log(carros)
 })
