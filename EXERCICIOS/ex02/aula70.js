@@ -4,6 +4,10 @@ const btnRes = document.getElementById("tigual")
 const resultado = document.getElementById("display")
 const ton = document.getElementById("ton")
 const tlimpar = document.getElementById("tlimpar")
+const cpy = document.getElementById("cpy")
+const teste = document.getElementById("teste")
+const calc_aba = document.getElementById("calc_aba")
+const calc = document.getElementById("calc")
 let sinal = false
 let decimal = false
 
@@ -58,6 +62,18 @@ btnRes.addEventListener("click",()=>{
     decimal = false
     const res = eval(resultado.innerHTML)
     resultado.innerHTML = res
+
+})
+
+tcpy.addEventListener("click", (evt)=>{
+    //copia item selecionado
+    teste.select()
+    teste.setSelectionRange(0,99999) //previni problemas no mobille
+    navigator.clipboard.writeText(teste.value)
+})
+
+calc_aba.addEventListener("click",()=>{
+    calc.classList.toggle("hidden")
 })
 
 
